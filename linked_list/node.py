@@ -1,7 +1,5 @@
-from lists.core import List
-
 class Node:
-    def __init__(self, data, next_node = None):
+    def __init__(self, data, next_node=None):
         self._data = data
         self._next = next_node
         self._prev = None

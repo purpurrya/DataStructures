@@ -74,3 +74,11 @@ class SinglyLinkedList:
         while current is not None:
             current._data = function(current.data())
             current = current.next()
+
+    def get_by_index(self, index: int) -> Any:
+        if index < 0 or index >= len(self):
+            raise IndexError
+        current = self._head
+        for _ in range(index):
+            current = current.next()
+        return current.data()
