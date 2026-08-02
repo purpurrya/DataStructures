@@ -1,6 +1,7 @@
 import copy
 from typing import Any
 
+
 class CircularQueueIterator:
     def __init__(self, circular_queue):
         self._circular_queue = circular_queue

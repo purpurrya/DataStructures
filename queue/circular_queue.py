@@ -1,7 +1,6 @@
 import copy
 from typing import Any
 
-from . import CircularQueueIterator
 
 class CircularQueue:
     def __init__(self, max_size: int):
@@ -16,7 +15,8 @@ class CircularQueue:
     def __len__(self) -> int:
         return self._size
 
-    def __iter__(self) -> CircularQueueIterator:
+    def __iter__(self):
+        from .circular_queue_iterator import CircularQueueIterator
         return CircularQueueIterator(self)
     
     def is_empty(self) -> bool:
